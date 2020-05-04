@@ -307,7 +307,8 @@ h1 {
         /* background: rgb(251, 143, 143); */
         color: rgb(49, 49, 49);
         text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white;
-        height: 2rem;
+        height: 3rem;
+
     }
 
 
@@ -373,8 +374,8 @@ h1 {
     }
 
     .game-over {
-        font-size: 0.9rem;
-        height: 1rem;
+        font-size: 0.8rem;
+        height: 2rem;
     }
 
     .score {
