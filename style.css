@@ -1,0 +1,411 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: rgb(81, 212, 191);
+    /* background-color: rgb(89, 216, 157); */
+
+}
+
+#snake-container {
+    /* background-color: rgb(231, 148, 162); */
+    padding: 4vh 10vw;
+    height: 100vh;
+    width: 60%;
+    /* Photo by Jordan McQueen on Unsplash */
+    background: url(/images/communism2.jpg);
+    /* background: linear-gradient(54deg, rgb(235, 102, 122) 0%, rgb(245, 46, 82) 100%); */
+
+
+    background-size: cover;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    margin: 0 auto;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.9rem;
+    text-shadow: -4px 0 rgb(6, 16, 110), 0 4px rgb(6, 16, 110), 4px 0 rgb(6, 16, 110), 0 -4px rgb(6, 16, 110);
+}
+
+.start {
+    margin: 2rem 0 1rem 0;
+    background-color: rgb(255, 185, 197);
+    background: -o-linear-gradient(54deg, rgb(246, 236, 185) 0%, rgb(248, 236, 168) 100%);
+    background: -o-linear-gradient(36deg, rgb(246, 236, 185) 0%, rgb(248, 236, 168) 100%);
+    background: linear-gradient(54deg, rgb(246, 236, 185) 0%, rgb(248, 236, 168) 100%);
+    border: 2px solid rgb(6, 16, 110);
+    color: rgb(6, 16, 110);
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    letter-spacing: 0.05rem;
+    font-size: 1.2rem;
+    height: 2.2rem;
+}
+
+.score {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: white;
+    text-shadow: -2px 0 rgb(6, 16, 110), 0 2px rgb(6, 16, 110), 2px 0 rgb(6, 16, 110), 0 -2px rgb(6, 16, 110);
+}
+
+.game-over {
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    height: 1.2rem;
+    /* background: rgb(251, 143, 143); */
+    color: rgb(49, 49, 49);
+    text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white;
+}
+
+.grid {
+    width: 220px;
+    height: 220px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 auto 2rem auto;
+    border: 0.21rem solid rgb(56, 56, 56);
+    /* background: white; */
+    /* /* background: -o-linear-gradient(36deg, rgb(38, 184, 189) 0%, rgb(114, 208, 231) 100%); */
+    background: -o-linear-gradient(36deg, rgb(159, 219, 177) 0%, rgb(144, 219, 166) 100%);
+    background: linear-gradient(54deg, rgb(159, 219, 177) 0%, rgb(144, 219, 166) 100%);
+    background: rgb(81, 212, 191);
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+#snake-direction-buttons {
+    margin-top: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#snake-direction-buttons button {
+    background-color: rgb(94, 218, 187);
+    /* background: -webkit-gradient(linear, left bottom, left top, from(rgb(81, 221, 191)), to(rgb(95, 212, 187))); */
+    background: -o-linear-gradient(54deg, rgb(94, 218, 187) 0%, rgb(61, 221, 200) 100);
+    background: -o-linear-gradient(36deg, rgb(94, 218, 187) 0%, rgb(61, 221, 200) 100%);
+    background: linear-gradient(54deg, rgb(94, 218, 187) 0%, rgb(61, 221, 200) 100%);
+    border: 2px solid rgb(6, 16, 110);
+    color: rgb(46, 46, 46);
+    padding: 0.2rem 0.4rem;
+    font-size: 1.1rem;
+    width: 4.5rem;
+}
+
+.btn-up-down {
+    margin-bottom: 0.5rem;
+}
+
+.btn-left-right {
+    margin-bottom: 0.5rem;
+}
+
+.btn-left {
+    margin-right: 0.2rem;
+}
+
+.btn-right {
+    margin-left: 0.2rem;
+}
+
+.snake {
+    /* background-color: rgb(3, 87, 165); */
+    background-color: rgb(116, 115, 115);
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.grid .snake1 {
+    background-color: rgb(117, 117, 117);
+}
+
+.grid .snake2 {
+    background-color: rgb(117, 104, 104);
+}
+
+.grid .snake3 {
+    background-color: rgb(114, 91, 91);
+}
+
+.grid .snake4 {
+    background-color: rgb(112, 79, 79);
+}
+
+
+
+.grid .snake5 {
+    background-color: rgb(100, 57, 57);
+}
+
+.grid .snake6 {
+    background-color: rgb(109, 45, 45);
+}
+
+
+.grid .snake7 {
+    background-color: rgb(128, 32, 32);
+}
+
+.grid .snake8 {
+    background-color: rgb(148, 18, 18);
+}
+
+.grid .snake9 {
+    background-color: rgb(167, 11, 11);
+}
+
+
+
+
+.snakeHead {
+    background-color: rgb(211, 32, 32);
+
+}
+
+.apple {
+    background-color: rgb(185, 7, 7);
+    /* background: linear-gradient(54deg, rgb(23, 129, 9) 35%, rgb(214, 35, 35) 60%);
+    background: -o-linear-gradient(36deg, rgb(23, 129, 9) 35%, rgb(214, 35, 35) 60%);
+    -webkit-clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0);
+    clip-path: polygon(52% 0, 42% 27%, 76% 12%, 100% 48%, 80% 90%, 34% 99%, 6% 74%, 3% 33%, 34% 29%, 39% 0); */
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+}
+
+.grid-container .grid .eatenApple {
+    background-color: rgb(211, 70, 70);
+    /* background: linear-gradient(54deg, rgb(2, 98, 47) 40%, rgb(184, 5, 124) 50%); */
+
+}
+
+.upOpenMouth {
+    -webkit-clip-path: polygon(51% 54%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    clip-path: polygon(51% 54%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+.downOpenMouth {
+    -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 51% 45%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 51% 45%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+.leftOpenMouth {
+    -webkit-clip-path: polygon(45% 0, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 9% 70%, 52% 50%, 11% 18%);
+    clip-path: polygon(45% 0, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 9% 70%, 52% 50%, 11% 18%);
+
+}
+
+.rightOpenMouth {
+    -webkit-clip-path: polygon(50% 0%, 86% 16%, 49% 51%, 94% 75%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    clip-path: polygon(50% 0%, 86% 16%, 49% 51%, 94% 75%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+
+}
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.4rem;
+        letter-spacing: 0.7rem;
+    }
+
+    #snake-container {
+        background-color: rgb(236, 77, 104);
+        padding: 4vh 3vw;
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .start {
+        margin: 3rem 0 1rem 0;
+        border: 2px solid rgb(68, 86, 119);
+        padding: 0.2rem 0.5rem;
+        letter-spacing: 0.05rem;
+        font-size: 1rem;
+        height: 2rem;
+    }
+
+    .grid {
+        width: 220px;
+        height: 220px;
+        margin: 4rem auto 2rem auto;
+
+    }
+
+    #snake-direction-buttons button {
+        font-size: 1rem;
+        width: 4.1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+
+    #snake-container {
+        /* background-color: rgb(236, 77, 104); */
+        padding: 3.5vh 3vw;
+        height: 100vh;
+        width: 100vw;
+        /* background: url(/images/communism2_small.jpg); */
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        letter-spacing: 0.4rem;
+        text-shadow: -2px 0 rgb(6, 16, 110), 0 2px rgb(6, 16, 110), 2px 0 rgb(6, 16, 110), 0 -2px rgb(6, 16, 110);
+
+    }
+
+    .game-over {
+        /* margin-bottom: 0.5rem; */
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 0.9rem;
+        letter-spacing: 0.02rem;
+        /* background: rgb(251, 143, 143); */
+        color: rgb(49, 49, 49);
+        text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white;
+        height: 2rem;
+    }
+
+
+    .start {
+        margin: 1rem 0 0.5rem 0;
+        border: 2px solid rgb(68, 86, 119);
+        /* font-weight: bold; */
+        letter-spacing: 0.05rem;
+        font-size: 0.8rem;
+        height: 1.7rem;
+        padding: 0.2rem 0.5rem;
+        letter-spacing: 0.05rem;
+    }
+
+
+    .score {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        margin: 0 auto 2.5rem auto;
+        border: 0.2rem solid rgb(68, 86, 119);
+    }
+
+    #snake-direction-buttons {
+        margin-top: 0;
+
+    }
+
+    #snake-direction-buttons button {
+        border: 2px solid rgb(68, 86, 119);
+        color: rgb(58, 73, 102);
+        padding: 0.2rem 0.4rem;
+        width: 4rem;
+        font-size: 0.9rem;
+    }
+
+
+}
+
+@media (max-width: 359px) {
+
+    h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.7rem;
+    }
+
+    .start {
+        margin: 0.2rem 0 0.5rem 0;
+    }
+
+    #snake-container {
+        /* background-color: rgb(236, 77, 104); */
+        padding: 2vh 3vw 1vh 3vw;
+        height: 100vh;
+        width: 100vw;
+        /* background: url(/images/communism2_small.jpg); */
+        margin: 0;
+    }
+
+    .game-over {
+        font-size: 0.9rem;
+        height: 1rem;
+    }
+
+    .score {
+        margin-bottom: 0.3rem;
+        font-weight: bold;
+        font-size: 1.05rem;
+    }
+
+    .grid {
+        margin: 0 auto 1rem auto;
+        border: 0.2rem solid rgb(68, 86, 119);
+    }
+
+    #snake-direction-buttons button {
+        border: 2px solid rgb(68, 86, 119);
+        color: rgb(58, 73, 102);
+        padding: 0.15rem 0.3rem;
+        width: 3, 5rem;
+        font-size: 0.8rem;
+    }
+
+
+    .btn-up-down {
+        margin-bottom: 0.35rem;
+    }
+
+    .btn-left-right {
+        margin-bottom: 0.35rem;
+    }
+
+    .btn-left {
+        margin-right: 0.2rem;
+    }
+
+    .btn-right {
+        margin-left: 0.2rem;
+    }
+}
