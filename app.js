@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //to start, and restart the game
     function startGame() {
-        currentSnake.forEach(index => squares[index].classList.remove('snake', 'eatenApple', 'upOpenMouth', 'downOpenMouth', 'leftOpenMouth', 'rightOpenMouth', 'snakeHead', "snake1", "snake2", "snake3", "snake4", "snake5", "snake6", "snake7", "snake8", "snake9")); //remove snake, openMouths and eatenApple from last game
+        currentSnake.forEach(index => squares[index].classList.remove('snake', 'eatenApple', 'upOpenMouth', 'downOpenMouth', 'leftOpenMouth', 'rightOpenMouth', 'snakeHead', "snake1", "snake2", "snake3", "snake4", "snake5", "snake6", "snake7", "snake8", "snake9", "snake10")); //remove snake, openMouths and eatenApple from last game
         squares[appleIndex].classList.remove('apple');
         gameOver.textContent = "..."
         clearInterval(interval);
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gameOver.textContent = "Quark lässt sich bestimmt nicht Kommunismus überzeugen."
             } else if (score <= 17) {
                 gameOver.textContent = "Vielleicht ist Kommunismus doch nur eine Utopie."
-            } else if (score <= 19) {
+            } else if (score >= 18) {
                 gameOver.textContent = "Woher weiss ich, dass das jetzt schon der Kommunismus ist?"
             }
 
@@ -152,58 +152,53 @@ document.addEventListener('DOMContentLoaded', () => {
         //change color depending on score, from grey to red
         for (let i = 1; i < currentSnake.length; i++) {
             if (score >= 1) {
-                // squares[currentSnake[i]].classList.add('snake1')
                 squares[tail].classList.remove('snake1')
                 squares[currentSnake[1]].classList.add('snake1')
             }
 
             if (score >= 3) {
-                // squares[currentSnake[i]].classList.add('snake2')
                 squares[tail].classList.remove('snake2')
                 squares[currentSnake[1]].classList.add('snake2')
-
             }
 
             if (score >= 5) {
-                // squares[currentSnake[i]].classList.add('snake2')
                 squares[tail].classList.remove('snake3')
                 squares[currentSnake[1]].classList.add('snake3')
-
             }
 
             if (score >= 7) {
-                // squares[currentSnake[i]].classList.add('snake2')
                 squares[tail].classList.remove('snake4')
                 squares[currentSnake[1]].classList.add('snake4')
-
             }
 
             if (score >= 9) {
-                // squares[currentSnake[i]].classList.add('snake2')
                 squares[tail].classList.remove('snake5')
                 squares[currentSnake[1]].classList.add('snake5')
-
             }
 
             if (score >= 11) {
-                // squares[currentSnake[i]].classList.add('snake2')
                 squares[tail].classList.remove('snake6')
                 squares[currentSnake[1]].classList.add('snake6')
-
             }
 
             if (score >= 13) {
-                // squares[currentSnake[i]].classList.add('snake2')
                 squares[tail].classList.remove('snake7')
                 squares[currentSnake[1]].classList.add('snake7')
-
             }
 
             if (score >= 15) {
-                // squares[currentSnake[i]].classList.add('snake2')
-                squares[tail].classList.remove('snake7')
-                squares[currentSnake[1]].classList.add('snake7')
+                squares[tail].classList.remove('snake8')
+                squares[currentSnake[1]].classList.add('snake8')
+            }
 
+            if (score >= 17) {
+                squares[tail].classList.remove('snake9')
+                squares[currentSnake[1]].classList.add('snake9')
+            }
+
+            if (score >= 19) {
+                squares[tail].classList.remove('snake10')
+                squares[currentSnake[1]].classList.add('snake10')
             }
 
 

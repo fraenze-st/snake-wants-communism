@@ -155,38 +155,42 @@ h1 {
 }
 
 .grid .snake2 {
-    background-color: rgb(117, 104, 104);
+    background-color: rgb(129, 114, 114);
 }
 
 .grid .snake3 {
-    background-color: rgb(114, 91, 91);
+    background-color: rgb(131, 102, 102);
 }
 
 .grid .snake4 {
-    background-color: rgb(112, 79, 79);
+    background-color: rgb(138, 96, 96);
 }
 
 
 
 .grid .snake5 {
-    background-color: rgb(100, 57, 57);
+    background-color: rgb(143, 82, 82);
 }
 
 .grid .snake6 {
-    background-color: rgb(109, 45, 45);
+    background-color: rgb(172, 77, 77);
 }
 
 
 .grid .snake7 {
-    background-color: rgb(128, 32, 32);
+    background-color: rgb(195, 70, 70);
 }
 
 .grid .snake8 {
-    background-color: rgb(148, 18, 18);
+    background-color: rgb(197, 64, 64);
 }
 
 .grid .snake9 {
-    background-color: rgb(167, 11, 11);
+    background-color: rgb(214, 43, 43);
+}
+
+.grid .snake10 {
+    background-color: rgb(228, 24, 24);
 }
 
 
