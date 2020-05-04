@@ -92,8 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[tail].classList.remove('snake') //removes class of snake from tail
         currentSnake.unshift(currentSnake[0] + direction) //gives direction to the head
 
+
         squares[currentSnake[0]].classList.add('snake')
 
+        // adds snakeHead - color
+        squares[currentSnake[0]].classList.add("snakeHead")
 
         // adds open mouth and direction of open mouth
         if (squares[currentSnake[0] + direction] && direction === -width) {
@@ -107,15 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         } else if (squares[currentSnake[0] + direction] && direction === 1) {
             squares[currentSnake[0]].classList.add("rightOpenMouth")
-
-        }
-
-
-
-
-        // adds snakeHead with different styling in css
-        if (squares[currentSnake[0] + direction]) {
-            squares[currentSnake[0]].classList.add("snakeHead")
         }
 
 

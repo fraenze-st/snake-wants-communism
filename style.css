@@ -196,7 +196,7 @@ h1 {
 
 
 
-.snakeHead {
+.grid .snakeHead {
     background-color: rgb(211, 32, 32);
 
 }
@@ -218,23 +218,23 @@ h1 {
 
 }
 
-.upOpenMouth {
+.grid .upOpenMouth {
     -webkit-clip-path: polygon(51% 54%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
     clip-path: polygon(51% 54%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 
-.downOpenMouth {
+.grid .downOpenMouth {
     -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 51% 45%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
     clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 51% 45%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
 
-.leftOpenMouth {
+.grid .leftOpenMouth {
     -webkit-clip-path: polygon(45% 0, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 9% 70%, 52% 50%, 11% 18%);
     clip-path: polygon(45% 0, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 9% 70%, 52% 50%, 11% 18%);
 
 }
 
-.rightOpenMouth {
+.grid .rightOpenMouth {
     -webkit-clip-path: polygon(50% 0%, 86% 16%, 49% 51%, 94% 75%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
     clip-path: polygon(50% 0%, 86% 16%, 49% 51%, 94% 75%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 
